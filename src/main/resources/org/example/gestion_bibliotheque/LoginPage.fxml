@@ -13,7 +13,7 @@
     <children>
         <VBox alignment="CENTER" spacing="10.0" layoutX="150.0" layoutY="100.0" prefWidth="300">
             <Label text="Connection to z-Lib"/>
-            <TextField fx:id="usermatriculeField" promptText="Matricule"/>
+            <TextField fx:id="usermatriculeField" promptText="Matricule_exemple: U001 , U004"/>
 
             <Button text="login" onAction="#handleLogin"/>
             <Label fx:id="errorLabel" textFill="red"/>
