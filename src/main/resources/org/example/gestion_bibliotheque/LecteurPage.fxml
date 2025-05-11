@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.gestion_bibliotheque.LecteurController">
+    <VBox alignment="TOP_CENTER" spacing="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+
+        <!-- Label du lecteur -->
+        <Label fx:id="lecteurNomLabel" text="Nom du Lecteur" style="-fx-font-size: 20px;"/>
+
+        <!-- Table des livres disponibles -->
+        <TableView fx:id="livresTable" prefHeight="200" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="titreLivreColumn" text="Titre" />
+                <TableColumn fx:id="auteurLivreColumn" text="Auteur" />
+                <TableColumn fx:id="genreLivreColumn" text="Genre" />
+            </columns>
+        </TableView>
+
+        <!-- Boutons pour emprunter ou retourner des livres et se deconnecter-->
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="emprunterBtn" text="Emprunter" onAction="#emprunterLivre"/>
+            <Button fx:id="retournerBtn" text="Retourner un Livre" onAction="#retournerLivre"/>
+
+        </HBox>
+
+        <!-- Table des emprunts -->
+        <TableView fx:id="empruntsTable" prefHeight="200" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="titreEmpruntColumn" text="Titre du Livre" />
+                <TableColumn fx:id="dateEmpruntColumn" text="Date d'Emprunt" />
+                <TableColumn fx:id="dateRetourColumn" text="Date de Retour" />
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

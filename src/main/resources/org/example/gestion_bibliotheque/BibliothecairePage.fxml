@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.gestion_bibliotheque.BibliothecaireController"
+      spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+    <Label text="Gestion des Livres" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <!-- Formulaire pour l'ajout/édition de livres -->
+    <TextField fx:id="titreField" promptText="Titre" />
+    <TextField fx:id="auteurField" promptText="Auteur" />
+    <TextField fx:id="genreField" promptText="Genre" />
+    <TextField fx:id="anneeField" promptText="Année de Publication" />
+    <CheckBox fx:id="disponibleCheckBox" text="Disponible" />
+
+    <Button text="Ajouter Livre" onAction="#ajouterLivre" />
+    <Button text="Mettre à Jour Livre" onAction="#mettreAJourLivre" />
+    <Button text="Supprimer Livre" onAction="#supprimerLivre" />
+
+    <!-- TableView pour afficher les livres -->
+    <TableView fx:id="tableLivres" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="titreColumn" text="Titre" />
+            <TableColumn fx:id="auteurColumn" text="Auteur" />
+            <TableColumn fx:id="genreColumn" text="Genre" />
+            <TableColumn fx:id="anneeColumn" text="Année de Publication" />
+            <TableColumn fx:id="disponibleColumn" text="Disponible" />
+        </columns>
+
+    </TableView>
+</VBox>
